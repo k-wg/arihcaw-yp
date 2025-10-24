@@ -1,0 +1,245 @@
+### Bull Market Trading Strategy (Daily Difference > 0%)
+
+
+
+
+#### Scenario 1: MA_350 ≤ Fibo_0.236 (All Other MAs > Fibo_0.236)
+1. **Entry Preparation**:
+   - Wait for MA_350 > Fibo_0.236.
+   - At this crossover, capture Fibo_1 (topmost Fibonacci level) and Fibo_0 (lowest Fibonacci level) as reference points.
+
+2. **Entry Confirmation**:
+   - Wait for MA_200 ≥ Fibo_0.618 and if both MA_50, 100 >= MA_200 at that point, wait till MA_50 <= MA_350 and enter limit order of MA_2 value
+   - Or if MA_50 <= fibo_0.236 or rsi_ma50 <= 35 occurs first, do not enter; disregard and start listening anew.
+
+3. **Exit Monitoring** (Continuous across all steps):
+   - Monitor MA_350 ≤ captured Fibo_0 at every step; if triggered, exit immediately at market order (silent reversal check).
+   - Monitor RSI_MA50 ≤ 35 (reversal activation):
+     - If triggered, wait for RSI_MA50 ≥ 50.
+     - Then monitor:
+       - RSI_MA50 ≥ 57 followed by MA_100 ≥ Fibo_0.764 → Exit at market order.
+       - Or RSI_MA50 ≤ 35 (double bottom) → Exit immediately at market order.
+   - Monitor MA_500 ≥ Fibo_0.764:
+     - If triggered, wait for MA_50 ≤ Fibo_0.618 → exit at market
+     - Then wait for MA_50 ≥ Fibo_0.618.
+     - Then wait for MA_50 ≤ 100 → Exit at market order.
+
+-After exiting,we capture the fibo_1 at that time and then we listen to whether MA_200 <= fibo_0.236 or MA_200 >= that recent captured fibo_1 and if MA_200 <= fibo_0.236, we proceed to restart the signal and listen anormal but if MA_200 >= that recent captured fibo_1, we enter at market order to exit when MA_50 <= fibo_0.5
+
+
+
+
+
+#### Scenario 2: MA_200 ≤ Fibo_0.236 (All Other MAs > Fibo_0.236)
+1. **Entry Preparation**:
+   - Wait for MA_200 > Fibo_0.236.
+   - At this crossover, capture Fibo_1 (topmost) and Fibo_0 (lowest) as reference points.
+
+2. **Entry Confirmation**:
+   - Wait for MA_200 ≥ Fibo_0.618 and if both MA_50, 100 >= MA_200 at that point Enter long position at market order.
+   - Or if MA_50 <= fibo_0.236 or rsi_ma50 <= 35 occurs first, do not enter; disregard and start listening anew.
+
+3. **Exit Monitoring** (Continuous across all steps):
+   - Monitor MA_350 ≤ captured Fibo_0 at every step; if triggered, exit immediately at market order (silent reversal check).
+   - Monitor RSI_MA50 ≤ 35 (reversal activation):
+     - If triggered, wait for RSI_MA50 ≥ 50.
+     - Then monitor:
+       - RSI_MA50 ≥ 57 followed by MA_100 ≥ Fibo_0.764 → Exit at market order.
+       - Or RSI_MA50 ≤ 35 (double bottom) → Exit immediately at market order.
+   - Monitor MA_350 > Fibo_0.764 and MA_100 ≤ MA_350:
+     - If triggered, capture new Fibo_1 (at that time).
+     - Wait till MA_100 <= fibo_0.764
+     - Then monitor RSI_MA50 ≥ 60.
+     - After RSI_MA50 ≥ 60, monitor:
+       - MA_100 ≥ captured Fibo_1 → MA_50 <= MA_200 → Exit at market order (if it occurs first).
+       - Or MA_100 ≤ Fibo_0.236 → Exit at market order (whichever first).
+
+After exiting,we capture the fibo_1 at that time and then we listen to whether MA_200 <= fibo_0.236 or MA_200 >= that recent captured fibo_1 and if MA_200 <= fibo_0.236, we proceed to restart the signal and listen anormal but if MA_200 >= that recent captured fibo_1, we enter at market order to exit when MA_50 <= fibo_0.5
+
+
+#### Scenario 3: MA_2, MA_7, MA_21 All < Fibo_0.236 (All Other MAs > Fibo_0.236)
+1. **Entry Preparation**:
+   - Monitor MA_50 relative to Fibo levels:
+     - If MA_50 ≤ Fibo_0.236 → Do not enter (no signal).
+     - If MA_50 ≥ Fibo_0.5 → Proceed to entry.
+
+2. **Entry Confirmation**:
+   - Enter long position at market order.
+   - Capture Fibo_1 (at entry point) as reference.
+
+3. **Exit Monitoring** (Continuous across all steps):
+   - Monitor MA_500 ≥ captured Fibo_1 or RSI_MA50 ≤ 35.
+   - If RSI_MA50 ≤ 35 first:
+     - Wait for RSI_MA50 ≥ 50.
+     - Then monitor:
+       - RSI_MA50 ≥ 57 → Wait for MA_100 ≥ Fibo_0.764 → Exit at market order.
+       - Or RSI_MA50 ≤ 35 → Exit immediately at market order.
+   - If MA_500 ≥ captured Fibo_1 first:
+     - Wait for MA_50 ≤ Fibo_0.618.
+     - Then wait for MA_50 ≥ Fibo_0.618.
+     - Then wait for MA_50 ≤ MA_100 → Exit at market order.
+
+
+
+
+
+#### Scenario 4: MA_2, MA_7, MA_21 All < Fibo_0.382 (All Other MAs > Fibo_0.382)
+1. **Entry Preparation**:
+   - Monitor MA_50 relative to Fibo levels:
+     - If MA_50 ≤ Fibo_0.382 → Do not enter (no signal).
+     - If MA_50 ≥ Fibo_0.618 → Proceed to entry.
+
+2. **Entry Confirmation**:
+   - Enter long position at market order.
+   - Capture Fibo_1 (at entry point) as reference.
+
+3. **Exit Monitoring** (Continuous across all steps):
+   - Monitor MA_500 ≥ captured Fibo_1 or RSI_MA50 ≤ 35.
+   - If RSI_MA50 ≤ 35 first:
+     - Wait for RSI_MA50 ≥ 40.
+     - Then monitor:
+       - RSI_MA50 ≥ 57 → Wait for MA_100 ≥ Fibo_0.764 → Exit at market order.
+       - Or RSI_MA50 ≤ 35 → Exit immediately at market order.
+   - If MA_500 ≥ captured Fibo_1 first:
+     - Wait for MA_50 ≤ Fibo_0.618.
+     - Then wait for MA_50 ≥ Fibo_0.618.
+     - Then wait for MA_50 ≤ MA_200 → Exit at market order.
+
+
+
+
+
+
+#### Scenario 5: MA_100 or MA_500 ≤ Fibo_0.236 (All Other MAs > Fibo_0.236)
+1. **Entry Preparation**:
+   - Wait for the lagging MA (MA_100 or MA_500) > Fibo_0.236.
+   - At this crossover, capture Fibo_1 (topmost) and Fibo_0 (lowest) as reference points.
+
+2. **Entry Confirmation**:
+   - Monitor MA_200 ≥ Fibo_0.618 or RSI_MA50 ≤ 35 or MA_50 <= fibo_0.236.
+     - If RSI_MA50 ≤ 35 or MA_50 <= fibo_0.236 occurs first → Do not enter.
+     - If MA_200 ≥ Fibo_0.618 first and if both MA_50, 100 >= MA_200 at that point → wait till MA_50 <= MA_350 and enter limit order of MA_02 value
+     - Or if MA_50 <= fibo_0.236 occurs first -- do not enter
+
+3. **Exit Monitoring** (Continuous across all steps):
+   - Monitor MA_500 ≥ captured Fibo_1 or RSI_MA50 ≤ 35.
+   - If RSI_MA50 ≤ 35 first, Wait for RSI_MA50 >= 50: 
+     -  and then listen to another second RSI_MA50 ≤ 35 → Exit immediately at market order.
+     - Or wait for RSI_MA50 ≥ 57 → Wait for MA_100 ≥ Fibo_1 (original has "fibo_100" – likely Fibo_1) → Exit at market order.
+   - If MA_500 ≥ captured Fibo_1 first:
+     - Wait for MA_50 ≤ Fibo_0.618.
+     - Then wait for MA_50 ≥ Fibo_0.618.
+     - At this point, capture new Fibo_1.
+     - Then monitor:
+       - MA_100 ≥ captured Fibo_1 → Exit at market order.
+       - Or MA_50 ≥ Fibo_0.236 → Exit at market order (whichever first).
+
+After exiting,we capture the fibo_1 at that time and then we listen to whether MA_200 <= fibo_0.236 or MA_200 >= that recent captured fibo_1 and if MA_200 <= fibo_0.236, we proceed to restart the signal and listen anormal but if MA_200 >= that recent captured fibo_1, we enter at market order to exit when MA_50 <= fibo_0.618
+
+
+
+#### Scenario 6: MA_50 ≤ Fibo_0.236 (All Other MAs > Fibo_0.236)
+1. **Entry Preparation**:
+   - Wait for MA_50 > Fibo_0.236.
+   - At this crossover, capture Fibo_1 (topmost Fibonacci level) and Fibo_0 (lowest Fibonacci level) as reference points.
+
+2. **Entry Confirmation**:
+   - Wait for MA_50 >= MA_100, 200,350, 500 and Enter long position at market order - if it occurs first.
+   - Or if MA_50 <= fibo_0.236 or rsi_ma50 <= 35 occurs first, do not enter; disregard and start listening anew.
+
+3. **Exit Monitoring** (Continuous across all steps):
+   - Monitor MA_350 ≤ captured Fibo_0 at every step; if triggered, exit immediately at market order (silent reversal check).
+   - Monitor RSI_MA50 ≤ 35 (reversal activation):
+     - If triggered, wait for RSI_MA50 ≥ 40.
+     - Then monitor:
+       - RSI_MA50 ≥ 57 followed by MA_100 ≥ Fibo_0.764 → Exit at market order.
+       - Or RSI_MA50 ≤ 35 (double bottom) → Exit immediately at market order.
+   - Monitor MA_500 ≥ that captured Fibo_1:
+     - If triggered, wait for MA_50 ≤ Fibo_0.618.
+     - Then wait for MA_50 ≥ Fibo_0.618.
+     - Then wait for MA_50 ≤ 100 → Exit at market order.
+
+
+#### Scenario 7: MA_50 < Fibo_0.382 (All Other MAs > Fibo_0.382)
+1. **Entry Preparation**:
+   - Monitor MA_100 relative to Fibo levels:
+     - If MA_100 ≤ Fibo_0.382 → Do not enter (no signal).
+     - If MA_100 ≥ Fibo_0.618 → Proceed to entry.
+
+2. **Entry Confirmation**:
+   - Enter long position at market order.
+   - Capture Fibo_1 (at entry point) as reference.
+
+3. **Exit Monitoring** (Continuous across all steps):
+   - Monitor MA_500 ≥ captured Fibo_1 or RSI_MA50 ≤ 35.
+   - If RSI_MA50 ≤ 35 first:
+     - Wait for RSI_MA50 ≥ 40.
+     - Then monitor:
+       - RSI_MA50 ≥ 57 → Wait for MA_100 ≥ Fibo_0.764 → Exit at market order.
+       - Or RSI_MA50 ≤ 35 → Exit immediately at market order.
+   - If MA_500 ≥ captured Fibo_1 first:
+      - Wait till MA_50 <= MA_200 → Exit at market order.
+
+
+
+
+### Bear Market Trading Strategy (Daily Difference is between zero to negative one percent)
+
+#### Scenario 1: MA_50 Only < Fibo_0.236 (All Other MAs > Fibo_0.236)
+1. **Entry Preparation**:
+   - Wait for MA_50 ≥ Fibo_0.236.
+   - At this point, capture Fibo_1 as reference.
+
+2. **Entry Confirmation**:
+   - Wait for MA_50 ≥ MA_100, MA_200, MA_350, MA_500 and fibo_0.5.
+   - Enter short position at market order. [Note: Assumed short based on bear context; confirm direction.]
+
+3. **Exit Monitoring** (Continuous across all steps):
+   - Monitor MA_100 ≥ captured Fibo_1 or MA_50 ≤ Fibo_0.236.
+   - If MA_50 ≤ Fibo_0.236 first → Exit at market order.
+   - If MA_100 ≥ captured Fibo_1 occured first:
+     - Wait for MA_50 ≤ MA_100 and MA_500.
+     - Then monitor:
+       - MA_50 ≤ Fibo_0.236 → Exit at market order.
+       - Or MA_100 ≥ MA_500 (if it occurs we wait for MA_50 <= MA_100) → Exit at market order.
+
+
+
+
+#### Scenario 2: MA_2, MA_7, MA_21 < Fibo_0.236 (All Other MAs > Fibo_0.236)
+1. **Entry Preparation**:
+   - Monitor MA_50:
+     - If MA_50 ≤ Fibo_0.236 → Disregard trend (fully formed fall; no entry).
+     - If MA_50 ≥ Fibo_0.5 → Proceed to make a market order
+   - Capture Fibo_1 at this point.
+
+2. **Entry Confirmation**:
+   - Wait for MA_100 ≥ captured Fibo_1 or MA_50 ≤ Fibo_0.236.
+     - If MA_50 ≤ Fibo_0.236 first → Exit preparation (no full entry).
+     -  If MA_100 ≥ captured Fibo_1 first:
+     - Wait for MA_50 ≤ MA_100 and MA_500.
+     - Then monitor:
+       - MA_50 ≤ Fibo_0.236 → Exit at market order.
+       - Or MA_100 ≥ MA_500 → MA_50 <= MA_200 → Exit at market order.
+
+
+
+
+#### Scenario 3: MA_200, MA_350, or MA_500 < Fibo_0.236 (All Other MAs > Fibo_0.236)
+1. **Entry Preparation**:
+   - Wait for the MA_200 ≥ Fibo_0.618. [Note: We employ MA_200 regardless of whether it is a MA_200 / 350/ 500 wave. ]
+
+2. **Entry Confirmation**:
+   - Immediately check if both MA_50, 100 ≤ MA_200:
+     - If yes → Disregard trend; restart monitoring.
+     - If MA_50, 100 ≥ MA_200 → wait till MA_50 <= MA_350 and enter limit order of MA_2 value
+
+3. **Exit Monitoring** (Continuous across all steps):
+   - Monitor RSI_MA50 ≥ 64 or MA_50 ≤ Fibo_0.236.
+   - If MA_50 ≤ Fibo_0.236 first → Exit at market order.
+   - If RSI_MA50 ≥ 64 first: 
+     - Capture fibo_1 at that point
+     - Then monitor:
+       - [MA_200 ≥ to that captured fibo_1 → MA_200 <= fibo_0.618 → Listen to either MA_50 >= MA_500 (and if this occurs, we wait till MA_50 <= MA_100 → {rsi_ma50 >= 65 → rsi_ma50 <= 51) against MA_50 <= fibo_0.236 incase a reversal occurs at this point}] or [MA_50 <= fibo_0.236] → Exit at market order(whichever occurs first). NB: the '[]' shows two either- or conditions
+       - Or MA_50 ≤ Fibo_0.236 → Exit at market order (whichever occurs first).
+
